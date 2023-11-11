@@ -1,0 +1,43 @@
+GET https://localhost:3000/api HTTP/1.1
+###
+DELETE https://localhost:4200/api/posts/654658edab0e4cc5989226ef HTTP/1.1
+###
+POST https://localhost:4200/api/posts HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "1",
+    "name": "message"
+}
+###
+POST https://localhost:3000/api/users/signup HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "username",
+    "firstname": "evan",
+    "lastname": "Sobotker",
+    "password": "password"
+}
+###
+POST https://localhost:3000/api/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username":"username",
+    "password":"password"
+}
+###
+POST https://localhost:3000/api/posts HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJuYW1lIiwidXNlcmlkIjoiNjU0YTQ1ODlkNGYxMjEzZTZmNmMwMTA0IiwiaWF0IjoxNjk5MzY2MjkxLCJleHAiOjE2OTkzNjk4OTF9.SH46xDr96jKtQu7e5xFmX0VkwrZBTzyfmLh0tdU_G94
+
+{
+    "id":"problem",
+    "name":"We need more electrivity"
+}
+###
+GET https://localhost:3000/api/posts HTTP/1.1
+###
+DELETE https://localhost:3000/api/posts/6547aee4281ece394d21b48f HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxIiwidXNlcmlkIjoiNjU0OGFhM2QxMjhkNzIxYzE5ZDg0ZjU1IiwiaWF0IjoxNjk5MjcyNDcxLCJleHAiOjE2OTkyNzYwNzF9.sn634DhWxExwLJGLq1SGT6CLrQ5KaLPOWORkAYnrb5I

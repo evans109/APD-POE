@@ -1,0 +1,17 @@
+<!-- user-create.component.html -->
+<form (submit)="onAddPost(addPostForm)" #addPostForm="ngForm">
+    <input type="text" ngModel name="enteredID" placeholder="message ID" required minlength="1" #enteredID="ngModel" />
+    <input
+      type="text"
+      ngModel
+      name="enteredMessage"
+      placeholder="Name"
+      required
+      minlength="1"
+      pattern="^[a-zA-Z\s_-]+$"
+      #enteredMessage="ngModel"
+    />
+  
+    <button type="submit">Add Post</button>
+  </form>
+  

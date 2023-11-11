@@ -1,0 +1,9 @@
+<div *ngFor="let post of posts">
+  <div>
+    ID: {{ post.id }}
+  </div>
+  <div>
+    Name: {{ post.name }}
+  </div>
+  <app-post-delete [postId]="post._id"></app-post-delete>
+</div>
